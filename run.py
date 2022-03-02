@@ -3,7 +3,7 @@ from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext
 
-ext = Extension("x", sources=["x.c"])
+ext = Extension("hik", sources=["hik.cpp"])
 
 setup(
 	ext_modules=[ext],
