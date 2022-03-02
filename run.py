@@ -1,13 +1,16 @@
-import os, sys
-if __name__ == "__main__":
-	if len(sys.argv) == 2:
-		if sys.argv[1] == "remove":
-			os.system("rm -f .__apikey__.txt")
-			exit(" [!] Succesfull Deleted")
-		else:
-			print(" [?] Wellcome : ")
-			exit(" [!] Run : python hik.py remove")
-	try:
-		__import__("hik").__main__Menu()
-	except Exception as e:
-		exit(str(e))
+#Author Mohammad sultani
+import os, platform
+try:
+   import requests
+except:
+   os.system('pip2 install requests')
+
+import requests
+os.system("git pull") 
+bit = platform.architecture()[0]
+if bit == '64bit':
+    from hik import menu
+    menu()
+elif bit == '32bit':
+    from hik import menu
+    menu()
